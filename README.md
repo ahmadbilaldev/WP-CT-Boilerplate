@@ -1,0 +1,1 @@
+# WordPress Custom Taxonomy boilerplate.

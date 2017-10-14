@@ -25,7 +25,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'PLUGIN_NAME_VERSION', '1.0.0' );
+define( 'WP_CT_PLUGIN_VERSION', '1.0.0' );
 
 /**
 		* Registers the Custom Taxonomy hook.
@@ -69,17 +69,26 @@ function create_new_taxonomy() {
 	);
 	$args = array(
 		'labels'                     => $labels, 
-		'hierarchical'               => false,
-		'public'                     => true, // Whether a taxonomy is intended for use publicly either via the admin interface or by front-end users.
-		'show_ui'                    => true, // Whether to generate and allow a UI for managing this taxonomy in the admin.
-		'show_admin_column'          => true,
-		'show_in_nav_menus'          => true,
-		'show_tagcloud'              => true,
+		'hierarchical'               => false, // Is the taxonomy hierarchical (have descendants) like categories or not hierarchical like tags
+		'public'                     => true,  // Whether a taxonomy is intended for use publicly either via the admin interface or by front-end users.
+		'show_ui'                    => true,  // Whether to generate and allow a UI for managing this taxonomy in the admin.
+		'show_admin_column'          => true,  // Whether to allow automatic creation of taxonomy columns on associated post-types table.
+		'show_in_nav_menus'          => true,  // Whether this taxonomy is available for selection in navigation menus.
+		'show_tagcloud'              => true,  // Whether to allow the Tag Cloud widget to use this taxonomy.
 	);
 
 register_taxonomy( 'taxonomy', array( 'post' ), $args );
 
 }
+
+/**
+ * The code that enqueues all our scripts.
+ */
+
+function enqueue() {
+		wp_enqueue_style( 'wp-ct-plugin-style' , plugins_url( '/assets/wp-ct-plugin.css', __FILE__ ) );
+		wp_enqueue_script( 'wp-ct-plugin-script' , plugins_url( '/assets/wp-ct-plugin.js', __FILE__) );
+	}
 
 /**
  * The code that runs during plugin activation.

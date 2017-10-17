@@ -1,24 +1,19 @@
 <?php
 
 /**
- * 
- *
- * @link              www.github.com/mrahmadbilal
- * @since             1.0.0
- * @package           Wp_Ct_Plugin
- *
- * @wordpress-plugin
- * Plugin Name:       WP CT Plugin.
- * Plugin URI:        www.github.com/mrahmadbilal
- * Description:       This is a WordPress Custom Taxonomy Plugin boilerplate. It makes creating custom taxonomies very easy and saves a lot of time. It is also properly documented to make it easier for you to customize it as per your needs.
- * Version:           1.0.0
- * Author:            Ahmad Bilal
- * Author URI:        www.github.com/mrahmadbilal
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       wp-ct-plugin
- * Domain Path:       /languages
- */
+* @link              https://github.com/mrahmadbilal
+* @since             1.0.0
+* @package           WP_Ct_Plugin
+* @wordpress-plugin
+* Plugin Name:       WP CT Plugin.
+* Plugin URI:        https://github.com/mrahmadbilal/WP-CT-Boilerplate
+* Description:       This is a WordPress Custom Taxonomy Plugin boilerplate. It makes creating custom taxonomies very easy and saves a lot of time. It is also properly documented to make it easier for you to customize it as per your needs.
+* Version:           1.0.0
+* Author:            mrahmadbilal
+* Author URI:        https://github.com/mrahmadbilal
+* License:           GPL-2.0+
+* License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+*/
 
 //  If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
@@ -28,20 +23,18 @@ if ( ! defined( 'WPINC' ) ) {
 define( 'WP_CT_PLUGIN_VERSION', '1.0.0' );
 
 /**
-		* Registers the Custom Taxonomy hook.
-		*
-		* @since 1.0.0
-		* @uses add_action()
-		*/
+* Registers the Custom Taxonomy hook.
+* @since 1.0.0
+* @uses add_action()
+*/
 
 add_action( 'init' ,'create_new_taxonomy');
 
 /**
-		* Creates a new custom taxonomy()
-		*
-		* @since 1.0.0
-		* @uses register_taxononmy()
-		*/
+* Creates a new custom taxonomy()
+* @since 1.0.0
+* @uses register_taxononmy()
+*/
 
 function create_new_taxonomy() {
 
@@ -78,7 +71,6 @@ function create_new_taxonomy() {
 	);
 
 register_taxonomy( 'taxonomy', array( 'post' ), $args );
-
 }
 
 /**
@@ -88,7 +80,7 @@ register_taxonomy( 'taxonomy', array( 'post' ), $args );
 function enqueue() {
 		wp_enqueue_style( 'wp-ct-plugin-style' , plugins_url( '/assets/wp-ct-plugin.css', __FILE__ ) );
 		wp_enqueue_script( 'wp-ct-plugin-script' , plugins_url( '/assets/wp-ct-plugin.js', __FILE__) );
-	}
+}
 
 /**
  * The code that runs during plugin activation.

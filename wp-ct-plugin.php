@@ -12,7 +12,7 @@
 * Author:            mrahmadbilal
 * Author URI:        https://github.com/mrahmadbilal
 * License:           GPL-2.0+
-* License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+* License URI:       http://gnu.org/licenses/gpl-2.0.txt
 */
 
 //  If this file is called directly, abort.
@@ -21,14 +21,6 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 define( 'WP_CT_PLUGIN_VERSION', '1.0.0' );
-
-/**
-* Registers the Custom Taxonomy hook.
-* @since 1.0.0
-* @uses add_action()
-*/
-
-add_action( 'init' ,'create_new_taxonomy');
 
 /**
 * Includes the file containing custom taxonomy code.

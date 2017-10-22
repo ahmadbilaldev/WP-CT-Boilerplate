@@ -1,6 +1,14 @@
 <?php
 
 /**
+* Registers the Custom Taxonomy hook.
+* @since 1.0.0
+* @uses add_action()
+*/
+
+add_action( 'init' ,'create_new_taxonomy');
+
+/**
 * Creates a new custom taxonomy()
 * @since 1.0.0
 * @uses register_taxononmy()

@@ -28,28 +28,4 @@ define( 'WP_CT_PLUGIN_VERSION', '1.0.0' );
 * @uses require_once()
 */
 
-require_once(dirname(__FILE__).'/wp-includes/ct.php');
-
-/**
- * The code that runs during plugin activation.
- * Uses activaiton hook.
- */
-
-function wp_ct_activation() {
- 
-  	// Write the activation code here.
-}
-
-register_activation_hook( __FILE__ , 'wp_ct_activation');
-
-/**
- * The code that runs during plugin deactivation.
- * Uses deactivaiton hook.
- */
-
-function wp_ct_deactivation() {
- 
-  	// Write the deactivation code here.
-}
-
-register_deactivation_hook( __FILE__ , 'wp_ct_deactivation');
+require_once(dirname(__FILE__).'/inc/ct.php');

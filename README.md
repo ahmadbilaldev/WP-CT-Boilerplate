@@ -1,6 +1,6 @@
 # WordPress Custom Taxonomy Boilerplate.
 
-This is a WordPress Custom Taxonomy Plugin boilerplate. It makes creating custom taxonomies very easy and saves a lot of time. It is also properly documented to make it easier for you to customize it as per your needs.
+This is a WordPress Custom Taxonomy Plugin boilerplate. A neat boilerplate containing all the necessary elements so as to save your time. It is also properly documented to make it easier for you to customize it as per your needs.
 
 ## Contents
 The WordPress Custom Taxonomy boilerplate consists of the following  files.
